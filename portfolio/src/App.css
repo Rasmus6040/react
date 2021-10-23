@@ -1,0 +1,461 @@
+*,
+*::before,
+*::after {
+
+}
+
+:root{
+  --ff-primary: sans-serif;
+  --ff-secondary: monospace;
+
+  --fw-reg: 300;
+  --fw-bold: 900;
+
+  --clr-light: #fff;
+  --clr-lightgrey: #dddd;
+  --clr-dark: #303030;
+  --clr-accent: #16c0bd;
+
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+
+  --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25), 
+        0.125em 0.125em 0.25em rgba(0,0,.15);
+}
+
+@media (min-width: 1050px){
+  :root{
+    --fs-h1: 4.5rem;
+    --fs-h2: 3.755rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1.12rem;
+  }
+}
+
+body{
+  background: var(--clr-light);
+  color: var(--clr-dark);
+  margin: 9;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+}
+
+section{
+  min-height: 80vh;
+  padding-top: 20vh;
+}
+
+
+img{
+  display: block;
+  max-width: 100%;
+}
+
+strong{font-weight: var(--fw-bold);}
+
+h1, h2, h3 {
+  line-height: 1;
+  margin: 0;
+}
+
+h1 {font-size: var(--fs-h1);}
+h2 {font-size: var(--fs-h2);}
+h3 {font-size: var(--fs-h3);}
+
+a{
+  text-decoration: none;
+  color: var(--clr-light);
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
+}
+
+a:hover{
+  color: var(--clr-lightgrey)
+}
+
+.intro-section{
+  background-color: var(--clr-light);
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+}
+
+.italics {
+  font-style: italic;
+  font-weight: var(--fw-reg);
+}
+
+.section_title {
+  margin-bottom: .25em;
+}
+
+.section__title {
+  font-size: var(--fs-h2);
+}
+
+.section__subtitle{
+  margin: 0;
+  margin-top: 5px;
+  font-size: var(--fs-h3);
+}
+
+.section__title--intro{
+  font-weight: var(--fw-reg);
+}
+
+.section__title--intro strong{
+  display: block;
+}
+
+.section__subtitle--intro{
+  background: var(--clr-accent);
+  padding: .25em 1em;
+  font-family: var(--ff-secondary);
+  margin-bottom: 1em;
+}
+
+.intro{
+  position: relative;
+  margin: 0 3rem;
+}
+
+
+
+.intro__img{
+  box-shadow: var(--bs);
+  border-radius: 100%;
+}
+
+.section__subtitle--intro{
+  display: inline-block;
+}
+
+.sub-intro{
+  padding: 3rem 1rem;
+}
+
+
+.why-me-section{
+  display: block;
+  justify-content: center;
+  background-color: var(--clr-lightgrey);
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.section__column{
+  margin: 2rem auto 0 auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+}
+
+.column1, .column2, .column3{
+  flex: 1;
+  margin: 1rem;
+  text-align: center;
+  min-width: 200px;
+}
+
+.no-margin-bottom{
+  margin-bottom: 0px;
+}
+.no-margin-top{
+  margin-top: 0px;
+}
+
+/*################################################################*/
+
+.tooltip {
+  margin: 0px;
+  display:inline-block;
+  position:relative;
+  text-align:left;
+  border-bottom:1px dotted #666;
+}
+
+.tooltip .top {
+  min-width:200px; 
+  top:-20px;
+  left:50%;
+  transform:translate(-50%, -100%);
+  padding:10px 20px;
+  color:#fff;
+  background-color:#16c0bd;
+  font-weight:normal;
+  text-align: center;
+  font-size:13px;
+  border-radius:8px;
+  position:absolute;
+  z-index:99999999;
+  box-sizing:border-box;
+  box-shadow:0 1px 8px rgba(0,0,0,0.25);
+  visibility:hidden; opacity:0; transition:opacity 0.8s;
+}
+
+.tooltip:hover .top {
+  visibility:visible; opacity:1;
+}
+
+.tooltip .top i {
+  position:absolute;
+  top:100%;
+  left:50%;
+  margin-left:-12px;
+  width:24px;
+  height:12px;
+  overflow:hidden;
+}
+
+.tooltip .top i::after {
+  content:'';
+  position:absolute;
+  width:12px;
+  height:12px;
+  left:50%;
+  transform:translate(-50%,-50%) rotate(45deg);
+  background-color:#16c0bd;
+  box-shadow:0 1px 8px rgba(0,0,0,0.25);
+}
+
+
+/*################################################################*/
+
+* {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  padding: 1rem;
+  position: relative;
+  max-width: 75vw;
+  margin: 3rem auto;
+  box-shadow: var(--bs);
+  border-radius: 1%;
+}
+
+/* Hide the images by default */
+.my-slides {
+  max-height: 60vh;
+  display: flex;
+  justify-content: center;
+}
+
+.my-slides img{
+  object-fit: contain;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: var(--clr-accent);
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 1rem;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+.current {
+  display: block;
+}
+
+/*################################################################*/
+
+
+.contact__button {
+  position: fixed;
+  width: 115px;
+  height: 50px;
+  right: 36px;
+  bottom: 36px;
+  background: var(--clr-accent);
+  border-radius: 100%;
+  text-align: center;
+  box-shadow: var(--bs);
+}
+
+.contact__button:hover{
+  filter: grayscale(50%);
+}
+
+.contact__button p {
+  margin-top: 10px;
+}
+.contact__button:hover p {
+  color: rgba(240, 240, 240);
+}
+
+.contact__field {
+  background: var(--clr-dark);
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  width: 15vw;
+  height: 250px;
+  border-radius: 5% 0 0 0;
+  box-shadow: -0.25em -0.25em 0.75em rgba(0,0,0,.25);
+}
+
+.contact__title {
+  text-align: center;
+  font-size: var(--fs-h2);
+  color: white;
+  margin-bottom: 0;
+}
+
+.contact__text {
+  margin: 0;
+  margin-bottom: 10px;
+  text-align: center;
+  color: white;
+  width: 100%;
+}
+
+#mail:hover{
+  display:none;
+}
+#mail:hover + #mail__hover {
+  display: block;
+}
+
+#mail__hover {
+  display: none;
+  color: var(--clr-accent)
+}
+#tel:hover{
+  display:none;
+}
+#tel:hover + #tel__hover {
+  display: block;
+}
+
+#tel__hover {
+  display: none;
+  color: var(--clr-accent)
+}
+
+.sicon{
+  margin: 5px;
+}
+
+.sicon:hover{
+  filter: grayscale(50%)
+}
+
+
+
+@media(min-width: 800px){
+  .section__title{
+    font-size: var(--fs-h1);
+  }
+
+  .intro{
+    display: grid;
+    width: min-content;
+    margin: 0 auto;
+    grid-column-gap: 1em;
+    grid-template-areas: 
+      "img title"
+      "img subtitle";
+    grid-template-columns: min-content max-content;
+  }
+
+  .intro__img{
+    grid-area: img;
+    min-width: 250px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .section__subtitle--intro{
+    align-self: start;
+    grid-column: -1 / 1;
+    grid-row: 2;
+    text-align: right;
+    position: relative;
+    left: -1.5em;
+    width: calc(99%)
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
