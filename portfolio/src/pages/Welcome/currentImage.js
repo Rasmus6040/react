@@ -1,8 +1,8 @@
 import React from 'react'
-import Quvang from '../images/Quvang.jpg';
-import Klinik from '../images/Klinik.jpg';
-import Flispudser from '../images/Flisepudser.jpg';
-import Brodal from '../images/Brodal.jpg';
+import Quvang from '../../images/Quvang.jpg';
+import Klinik from '../../images/Klinik.jpg';
+import Flispudser from '../../images/Flisepudser.jpg';
+import Brodal from '../../images/Brodal.jpg';
 
 function currentImage({index}) {
     switch (index){

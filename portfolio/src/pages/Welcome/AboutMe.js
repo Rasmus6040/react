@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import CurrentImage from './currentImage';
-import Quvang from '../images/Quvang.jpg';
-import Klinik from '../images/Klinik.jpg';
-import Flispudser from '../images/Flisepudser.jpg';
-import Brodal from '../images/Brodal.jpg';
+import Quvang from '../../images/Quvang.jpg';
+import Klinik from '../../images/Klinik.jpg';
+import Flispudser from '../../images/Flisepudser.jpg';
+import Brodal from '../../images/Brodal.jpg';
 
 function AboutMe() {
     const [index, setIndex] = useState(1);

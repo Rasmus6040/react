@@ -1,6 +1,6 @@
 import React from 'react'
-import FrontImage from '../images/FrontImage.jpg';
-import '../App.css';
+import FrontImage from '../../images/FrontImage.jpg';
+import '../../App.css';
 import Zoom from 'react-reveal/Zoom';
 
 

@@ -1,9 +1,3 @@
-*,
-*::before,
-*::after {
-
-}
-
 :root{
   --ff-primary: sans-serif;
   --ff-secondary: monospace;
@@ -185,7 +179,7 @@ a:hover{
   top:-20px;
   left:50%;
   transform:translate(-50%, -100%);
-  padding:10px 20px;
+  padding:0px 20px;
   color:#fff;
   background-color:#16c0bd;
   font-weight:normal;
@@ -223,6 +217,8 @@ a:hover{
   background-color:#16c0bd;
   box-shadow:0 1px 8px rgba(0,0,0,0.25);
 }
+
+
 
 
 /*################################################################*/
@@ -303,13 +299,11 @@ a:hover{
   clear: both;
 }
 
-/* Six columns side by side */
 .column {
   float: left;
   width: 25%;
 }
 
-/* Add a transparency effect for thumnbail images */
 .demo {
   opacity: 0.6;
 }
@@ -354,7 +348,7 @@ a:hover{
   position: fixed;
   right: 0px;
   bottom: 0px;
-  width: 15vw;
+  width: 200px;
   height: 250px;
   border-radius: 5% 0 0 0;
   box-shadow: -0.25em -0.25em 0.75em rgba(0,0,0,.25);
@@ -362,7 +356,7 @@ a:hover{
 
 .contact__title {
   text-align: center;
-  font-size: var(--fs-h2);
+  font-size: 30px;
   color: white;
   margin-bottom: 0;
 }
@@ -375,10 +369,12 @@ a:hover{
   width: 100%;
 }
 
-#mail:hover{
+
+#mail:hover > #mail__text{
   display:none;
 }
-#mail:hover + #mail__hover {
+
+#mail:hover > #mail__hover {
   display: block;
 }
 
@@ -386,17 +382,21 @@ a:hover{
   display: none;
   color: var(--clr-accent)
 }
-#tel:hover{
+
+
+#tel:hover > #tel__text{
   display:none;
 }
-#tel:hover + #tel__hover {
+
+#tel:hover > #tel__hover {
   display: block;
 }
-
 #tel__hover {
   display: none;
   color: var(--clr-accent)
 }
+
+
 
 .sicon{
   margin: 5px;
@@ -406,7 +406,56 @@ a:hover{
   filter: grayscale(50%)
 }
 
+.portfolio{
+  padding: 150px;
+  min-height: 0px;
+  max-width: 100vw;
+}
 
+.box{
+  margin-bottom: 50px;
+  margin-right: 50px;
+  display:inline-block;
+  width: 200px;
+  height: 200px;
+  border: solid;
+  border-width: 3px;
+  border-color: var(--clr-dark);
+  border-radius: 5%;
+  z-index: 3;
+}
+
+.box__image{
+  width: 200px;
+  height: 194px;
+  object-fit: fill;
+  border-radius: 2%;
+}
+
+.box__text{
+  position: relative;
+  height: 55px;
+  z-index: 99;
+  padding: 10px;
+  margin: 0;
+  top: -55px;
+  font-size: 22px;
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.box:hover{
+  filter: drop-shadow(5px 5px 10px black) grayscale(0.5);
+}
+
+.show{
+  display: block;
+}
+
+.not__show{
+  display: none;
+}
 
 @media(min-width: 800px){
   .section__title{
