@@ -28,6 +28,9 @@ class Navbar extends React.Component {
                 <Link onClick={() => this.closeMenu()} id="portfolie" className="menu-item" to="/portfolio">
                  Portfolie
                 </Link>     
+                <Link onClick={() => this.closeMenu()} id="CV" className="menu-item" to="/CV">
+                 CV
+                </Link>     
             </Menu>
         )
     }

@@ -19,15 +19,6 @@
         0.125em 0.125em 0.25em rgba(0,0,.15);
 }
 
-@media (min-width: 1050px){
-  :root{
-    --fs-h1: 4.5rem;
-    --fs-h2: 3.755rem;
-    --fs-h3: 1.5rem;
-    --fs-body: 1.12rem;
-  }
-}
-
 body{
   background: var(--clr-light);
   color: var(--clr-dark);
@@ -77,6 +68,7 @@ a:hover{
 .center{
   display: flex;
   justify-content: center;
+  overflow-wrap: break-word;
 }
 
 .italics {
@@ -96,6 +88,11 @@ a:hover{
   margin: 0;
   margin-top: 5px;
   font-size: var(--fs-h3);
+}
+
+.section__subtitle--CV{
+  font-size: var(--fs-h2);
+  color: #38761d;
 }
 
 .section__title--intro{
@@ -455,6 +452,67 @@ a:hover{
 
 .not__show{
   display: none;
+}
+
+.CV-section{
+  margin-top: 0;
+  padding-top: 100px;
+}
+
+.cv__section{
+  margin: 20px 50px 60px 100px; 
+}
+
+.cv__info{
+  vertical-align: top;
+  margin-top: 10px;
+  display: inline-block;
+  width: 150px;
+}
+
+.cv__text{
+  max-width: 650px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+@media(max-width: 1000px){
+  .cv__info{
+    width: 150px;
+  }
+  
+  .cv__text{
+    max-width: 400px;
+  }
+}
+
+@media(max-width: 750px){
+  .center{
+    margin: 0px 40px;
+  }
+  .cv__section{
+    margin: 20px 50px 60px 50px; 
+  }
+  .cv__info{
+    width: 120px;
+  }
+  
+  .cv__text{
+    max-width: 300px;
+  }
+}
+
+@media(max-width: 500px){
+
+  .cv__info{
+    margin-top: 0px;
+    display: block;
+  }
+  
+  .cv__text{
+    margin-top: 0px;
+    display: block;
+  }
 }
 
 @media(min-width: 800px){
